@@ -1,0 +1,419 @@
+@import url("http://fonts.cdnfonts.com/css/nastice");
+
+/* -------------------------- PRINCIPAL ---------------------------- */
+
+* {
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
+  margin: 0px;
+  padding: 0px;
+  font-size: 26px;
+  color: #fafafa;
+}
+
+:root {
+  --bg-color: rgb(1, 146, 103);
+  --boton: rgb(247, 195, 65);
+  --color3: rgb(0, 184, 138);
+  --color4: rgb(253, 255, 169);
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: url(../images/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ------------ TITULO -------------- */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#pokebola {
+  max-width: 100px;
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Nastice", sans-serif;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 2px #3b4cca;
+  color: #ffde00;
+  font-size: 130px;
+  padding: 0px 50px;
+  padding-top: 20px;
+  text-shadow: 3px 3px 2px #000633;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.404);
+  margin: 10px;
+}
+
+/* ------------ MASCOTAS -------------- */
+
+#seleccionar_mascota {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 30px;
+  padding-top: 0px;
+  align-items: center;
+}
+
+.mascotas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-items: center;
+  padding: 30px;
+  grid-gap: 30px;
+  background-color: rgba(0, 0, 0, 0.322);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+input {
+  display: none;
+}
+
+img {
+  max-width: 180px;
+  max-height: 210px;
+  margin: 0px auto 10px;
+}
+
+label {
+  width: 250px;
+  height: 280px;
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: radial-gradient(
+    rgba(151, 151, 151, 0.76) 15%,
+    rgba(63, 84, 129, 0.76) 70%,
+    rgba(49, 49, 49, 0.76)
+  );
+}
+
+label:hover {
+  transform: scale(1.08);
+  transition: 0.5s;
+  background: radial-gradient(
+    rgba(185, 154, 67, 0.76) 20%,
+    rgba(93, 14, 146, 0.76) 70%,
+    rgba(49, 49, 49, 0.76)
+  );
+}
+
+input:checked + label {
+  background: radial-gradient(
+    rgba(185, 154, 67, 0.76) 20%,
+    rgba(93, 14, 146, 0.76) 70%,
+    rgba(49, 49, 49, 0.76)
+  );
+}
+
+#boton-mascota {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(rgb(247, 195, 65), rgb(231, 97, 44));
+  width: 400px;
+  color: black;
+  box-shadow: 0px 0px 5px #000;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#boton-mascota:hover {
+  background: linear-gradient(rgb(231, 97, 44), rgb(247, 195, 65));
+  transition: 5s;
+}
+
+/* ------------ ATAQUES -------------- */
+
+#seleccionar_ataque {
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.322);
+  border-radius: 20px;
+  width: 60%;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.botones-ataques {
+  display: flex;
+  gap: 8px;
+  justify-items: center;
+  max-width: 630px;
+}
+
+.boton-ataque {
+  background: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  color: #00a84f;
+  height: 50px;
+  padding: 4px;
+  position: relative;
+  width: 7em;
+  z-index: 2;
+  border: none;
+}
+
+.boton-ataque:hover {
+  color: #fff;
+}
+
+.boton-ataque .baspan {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.boton-ataque:hover .baspan {
+  background: transparent;
+}
+
+#mensajes {
+  margin: 10px;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.404);
+  padding: 15px 40px;
+  border-radius: 20px;
+  font-size: 32px;
+}
+
+#reiniciar {
+  margin: auto;
+}
+
+#boton-reiniciar {
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(rgb(240, 113, 64), rgb(238, 32, 32));
+  width: 200px;
+  color: black;
+  box-shadow: 0px 0px 5px #000;
+  font-weight: 600;
+}
+
+#boton-reiniciar:hover {
+  background: linear-gradient(rgb(238, 32, 32), rgb(240, 113, 64));
+  transition: 5s;
+}
+
+.ataques-container {
+  display: grid;
+  grid-template-columns: 330px 330px;
+  column-gap: 25px;
+}
+
+.ataques_ {
+  background-color: rgba(0, 0, 0, 0.404);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* --------------------- CANVAS ---------------------------------- */
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mapa {
+  box-shadow: 0px 0px 25px black;
+}
+
+#controles {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+#up,
+#down,
+#right,
+#left {
+  background: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  color: #fdfdfd;
+  height: 50px;
+  padding: 4px;
+  position: relative;
+  width: 7em;
+  z-index: 2;
+  border: none;
+  margin-bottom: 5px;
+}
+#up:hover,
+#down:hover,
+#right:hover,
+#left:hover {
+  align-items: center;
+  background: linear-gradient(to right, #d32d22 0%, #eef124 100%);
+  transition: background 0.5s ease;
+}
+
+/* -------------------------- MEDIA QUERYS ---------------------------- */
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 23px;
+  }
+
+  #seleccionar_mascota {
+    padding-top: 0px;
+  }
+  #pokebola {
+    max-width: 100px;
+    margin: 0px;
+  }
+
+  h1 {
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px #3b4cca;
+    font-size: 100px;
+    padding: 20px 15px 0px;
+  }
+
+  .mascotas-container {
+    grid-template-columns: repeat(3, 200px);
+    padding: 22px;
+    grid-gap: 27px;
+    border-radius: 20px;
+    margin: 10px 5px 15px;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 180px;
+  }
+
+  label {
+    width: 210px;
+    height: 240px;
+    padding: 10px;
+  }
+
+  #boton-mascota {
+    padding: 15px;
+    width: 250px;
+    font-weight: 600;
+  }
+  /* ------------ ATAQUES -------------- */
+
+  .botones-ataques {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .ataques-container {
+    display: flex;
+  }
+
+  #mensajes {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    font-size: 20px;
+  }
+  body {
+    background-position-x: -480px;
+  }
+
+  #seleccionar_mascota {
+    padding-top: 0px;
+  }
+  #pokebola {
+    max-width: 50px;
+    margin: 0px;
+  }
+
+  h1 {
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px #3b4cca;
+    font-size: 65px;
+    padding: 0px 10px;
+    padding-top: 20px;
+  }
+
+  .mascotas-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    grid-gap: 20px;
+    margin: 15px;
+  }
+
+  img {
+    max-width: 130px;
+    max-height: 160px;
+  }
+
+  label {
+    width: 180px;
+    height: 210px;
+    padding: 10px;
+  }
+
+  /* ------------ ATAQUES -------------- */
+  #seleccionar_ataque {
+    min-width: 300px;
+  }
+  .botones-ataques {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ataques-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #controles div {
+    display: flex;
+    flex-direction: column;
+  }
+}
