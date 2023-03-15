@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <title>Mokepon</title>
+</head>
+
+<body>
+    <header>
+        <img id="pokebola" src="./images/pokebola.png" alt="pokebola">
+        <h1>MOKEPON!</h1>
+    </header>
+
+    <section id="seleccionar_mascota">
+
+        <h2>Elije tu mascota:</h2>
+
+        <div id="mascotas-container" class="mascotas-container">
+            <!-- <input type="radio" name="mascota" id="hipodoge">
+            <label for="hipodoge"> <img src="./images/hipodoge.png" alt="hipodoge">Hipodoge</label>
+
+            <input type="radio" name="mascota" id="capipepo">
+            <label for="capipepo"><img src="./images/capipepo.png" alt="capipepo">Capipepo</label>
+
+            <input type="radio" name="mascota" id="ratigueya">
+            <label for="ratigueya"><img src="./images/ratigueya.png" alt="ratigueya">Ratigueya</label>
+
+            <input type="radio" name="mascota" id="langostelvis">
+            <label for="langostelvis"><img src="./images/langostelvis.png" alt="langostelvis">Langostelvis</label>
+
+            <input type="radio" name="mascota" id="tucupalma">
+            <label for="tucupalma"><img src="./images/tucupalma.png" alt="tucupalma">Tucupalma</label>
+
+            <input type="radio" name="mascota" id="pydos">
+            <label for="pydos"><img src="./images/pydos.png" alt="pydos">Pydos</label>
+
+            <input type="radio" name="mascota" id="pidgeot">
+            <label for="pidgeot"><img src="./images/pidgeot.png" alt="pidgeot">Pidgeot</label> -->
+        </div>
+
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <h2>Recorre el mapa con tu mokepon</h2>
+        <canvas id="mapa"></canvas>
+        <div id="controles">
+            <button onmouseup="detenerMovimiento()" onmousedown="moverUp()" id="up">↑ - Arriba</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverLeft()" id="left">← - Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDown()" id="down">↓ - Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverRight()" id="right">→ - Derecha</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seleccionar_ataque">
+        <h2>Elije tu ataque:</h2>
+        <div id="botones_ataques" class="botones-ataques">
+            <!-- <button id="boton-fuego" class="boton-ataque"><span class="baspan">FUEGO 🔥</span></button>
+            <button id="boton-agua" class="boton-ataque"><span class="baspan">AGUA 💧</span></button>
+            <button id="boton-tierra" class="boton-ataque"><span class="baspan">TIERRA 🌱</span></button>
+            <button id="boton-aire" class="boton-ataque"><span class="baspan">AIRE 🌪</span></button> -->
+        </div>
+
+        <section id="mensajes">
+            <!-- <p>Tu mascota ataco con AIRE y la mascota del enemigo ataco con FUEGO - GANASTE ✨</p> -->
+            <!-- agregamos divs para darle estilo a nuestro js -->
+            <div id="resultado">Mucha suerte</div>
+        </section>
+
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar ❗</button>
+        </section>
+
+        <div class="ataques-container">
+            <div class="ataques_">
+                <p>TU:</p>
+                <p id="mostrar-mascota"></p>
+                <p><span id="mascota-jugador"></span></p>
+                <p><span id="vidas-jugador">0</span></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="ataques_">
+                <P>ENEMIGO:</P>
+                <p id="mostrar-mascota-enemigo"></p>
+                <p><span id="mascota-enemigo"></span></p>
+                <p><span id="vidas-enemigo">0</span></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/monsters.js"></script>
+
+</body>
+
+</html>
